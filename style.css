@@ -1,1 +1,85 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
+    body {
+        font-family: 'Varela Round', sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .section {
+        border: 1px solid black;
+        margin: 10px;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .section-title {
+        position: relative;
+        top: 0;
+        right: 0;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        border: 1px solid black;
+        align-self: flex-end;
+        padding: 5px 10px;
+    }
+
+    .section p {
+        margin: 0px;
+        padding: 20px;
+    }
+
+    .section:nth-child(1) .section-title {
+        background-color: #FF6F69;
+    }
+
+    .section:nth-child(2) .section-title {
+        background-color: #6A0572;
+    }
+
+    .section:nth-child(3) .section-title {
+        background-color: #1A2A6C;
+    }
+
+    @media screen and (max-width: 767px) {
+
+        /* Mobile view */
+        .container {
+            display: grid;
+        }
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 991px) {
+
+        /* Tablet view */
+        .container {
+            flex-wrap: wrap;
+        }
+
+        .section {
+            width: calc(50% - 40px);
+            margin-bottom: 20px;
+        }
+
+        .section:nth-child(3) {
+            width: 93%;
+            margin-top: 20px;
+        }
+    }
+
+</style>
